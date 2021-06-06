@@ -21,8 +21,8 @@ void setup() { // =========== SETUP ========= //
 }
 
 void loop() { // =========== LOOP ========= //
-  analogWrite(redLED, 66);
-  analogWrite(blueLED, 123);
+  analogWrite(redLED, 0);
+  analogWrite(blueLED, 0);
   analogWrite(greenLED, 33);
 
   motionSensor();
@@ -30,7 +30,7 @@ void loop() { // =========== LOOP ========= //
 }
 
 void motionSensor() {
-  digitalWrite(trigPin, LOW);
+  digitalWrite(trigPin, LOW); // why this is needed?  
   delayMicroseconds(2);
   
   digitalWrite(trigPin, HIGH);
