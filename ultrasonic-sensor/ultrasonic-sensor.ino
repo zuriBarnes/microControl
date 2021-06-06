@@ -1,13 +1,16 @@
+// UltraSensor values
 const int trigPin = 5;
 const int echoPin = 6;
 long duration;
 int distance;
+
+// LED values
 const int redLED = 11;
 const int blueLED = 10;
 const int greenLED = 10;
 
 
-void setup() {
+void setup() { // =========== SETUP ========= //
   Serial.begin(9600);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
@@ -17,7 +20,7 @@ void setup() {
 
 }
 
-void loop() {
+void loop() { // =========== LOOP ========= //
   analogWrite(redLED, 66);
   analogWrite(blueLED, 123);
   analogWrite(greenLED, 33);
