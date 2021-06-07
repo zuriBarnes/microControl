@@ -1,3 +1,5 @@
+// ========= Declarations ============ //
+
 // UltraSensor values
 const int trigPin = 5;
 const int echoPin = 6;
@@ -7,8 +9,7 @@ int distance;
 // LED values
 const int redLED = 11;
 const int blueLED = 10;
-const int greenLED = 10;
-
+const int greenLED = 9;
 
 void setup() { // =========== SETUP ========= //
   Serial.begin(9600);
@@ -17,18 +18,19 @@ void setup() { // =========== SETUP ========= //
   pinMode(redLED, OUTPUT);
   pinMode(blueLED, OUTPUT);
   pinMode(greenLED, OUTPUT);
-
 }
 
 void loop() { // =========== LOOP ========= //
-  analogWrite(redLED, 0);
-  analogWrite(blueLED, 0);
-  analogWrite(greenLED, 33);
-
-  motionSensor();
+   motionSensor();
+   if(distance <= 20) {
+    rgb_LED(55,55,0);
+   } else {
+      rgb_LED(0,0,0);
+    }
     Serial.println(distance);
 }
 
+//======= Functions ============ //
 void motionSensor() {
   digitalWrite(trigPin, LOW); // why this is needed?  
   delayMicroseconds(2);
@@ -39,4 +41,10 @@ void motionSensor() {
   
   duration = pulseIn(echoPin , HIGH);
   distance = duration * 0.034 / 2; //  Why is this neccessary?
+}
+
+int rgb_LED( int red_value , int green_value, int blue_value) {
+  analogWrite(redLED, red_value);
+  analogWrite(greenLED, green_value);
+  analogWrite(blueLED, blue_value);
 }
