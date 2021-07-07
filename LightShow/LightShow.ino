@@ -1,3 +1,5 @@
+// requires 12 individual LED's, and resistors
+
 using namespace std;
 String creator = "Zuri Barnes";
 String creatorURL = "www.zuribarnes.com";
