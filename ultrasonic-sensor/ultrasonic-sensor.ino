@@ -23,7 +23,6 @@ const int blueLED = 10;
 const int greenLED = 9;
 
 void setup() { // =========== SETUP ========= //
-
   Serial.begin(9600);
   pinMode(trigPin, OUTPUT);
   pinMode(echoPin, INPUT);
@@ -31,17 +30,14 @@ void setup() { // =========== SETUP ========= //
   pinMode(blueLED, OUTPUT);
   pinMode(greenLED, OUTPUT);
   pinMode(buzzPin, OUTPUT);
-  
 }
 
 void loop() { // =========== LOOP ========= //
-  
-
-   motionSensor();
-   if(distance <= 20) {
+  motionSensor();
+  if(distance <= 20) {
     rgb_LED(55,55,0);
-      digitalWrite(buzzPin, HIGH);
-        delay(100);
+    digitalWrite(buzzPin, HIGH);
+      delay(100);
        digitalWrite(buzzPin, LOW);
    } else {
       rgb_LED(0,0,0);
@@ -50,16 +46,14 @@ void loop() { // =========== LOOP ========= //
 }
 
 //======= Functions ============ //
-
-
 void motionSensor() {
   digitalWrite(trigPin, LOW); // why this is needed?  
   delayMicroseconds(2);
   
   digitalWrite(trigPin, HIGH);
   delayMicroseconds(10);
-  digitalWrite(trigPin, LOW);
   
+  digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin , HIGH);
   distance = duration * 0.034 / 2; //  Why is this neccessary?
 }
