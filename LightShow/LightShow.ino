@@ -3,6 +3,7 @@
 using namespace std;
 String creator = "Zuri Barnes";
 String creatorURL = "www.zuribarnes.com";
+int version = 1.0;
 void lightsOnebyOne();
 void levels();
 
