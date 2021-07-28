@@ -2,7 +2,7 @@
 
 using namespace std;
 String creator = "Zuri Barnes";
-String creatorURL = "www.zuribarnes.com";
+String creatorGitHub = "https://github.com/zuriBarnes";
 int version = 1.0;
 void lightsOnebyOne();
 void levels();
@@ -14,7 +14,7 @@ void setup() {   //  ====== Begin Setup ======
     }
     Serial.println("=========================================");
     Serial.println("Light Show by: " + creator);
-    Serial.println("view code at: " + creatorURL);
+    Serial.println("view code at: " + creatorGitHub);
     Serial.println("=========================================");
   }
 
