@@ -38,7 +38,8 @@ void levels() { // led's have volume motion effect
     } 
  }
  
-void lightsOnebyOne() {  // LED's light up one by one, from lowest pin to highest, and then back
+void lightsOnebyOne() {  
+  // LED's light up one by one, from lowest pin to highest, and then back
   int myDelayTime = 35;
   for(int i = 1; i <= 12; i++) {
     digitalWrite(i, HIGH);
