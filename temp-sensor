@@ -22,6 +22,6 @@ void loop(){
   lcd.print("Humidity: ");
   lcd.print(DHT.humidity);
   lcd.print("%");
-    lcd.print("scan completed..");
+    lcd.print("scan completed");
   delay(1200);
 }
