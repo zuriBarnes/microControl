@@ -1,6 +1,5 @@
-zuri@pop-os:~$ ls /dev/ttyACM0
+~$ ls /dev/ttyACM0
 /dev/ttyACM0
-zuri@pop-os:~$ sudo chmod a+rw /dev/ttyACM0
-[sudo] password for zuri: 
-zuri@pop-os:~$ 
+~$ sudo chmod a+rw /dev/ttyACM0
+
 
